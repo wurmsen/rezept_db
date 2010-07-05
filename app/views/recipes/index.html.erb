@@ -1,0 +1,8 @@
+<%- @recipes.each do |recipe| %>
+  <div class="recipe_list">
+    <h2><%= recipe.name %></h2>
+    <p>eingestellt von <%= recipe.user.login %></p>
+    <p>eingestellt am <%= recipe.created_at %></p>
+    <%= link_to "details", recipe_url(recipe.id) %>
+  </div>
+<%- end %>

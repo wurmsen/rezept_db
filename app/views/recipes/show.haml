@@ -1,0 +1,12 @@
+%h1 Rezept: #{@recipe.name}
+#directions
+  = @recipe.directions
+
+.footnotes
+  = @recipe.footnotes
+
+.recipe_infos
+  erstellt von #{@recipe.user.login}
+  erstellt am #{@recipe.created_at}
+
+= link_to "bearbeiten", edit_recipe_url(@recipe.id)
