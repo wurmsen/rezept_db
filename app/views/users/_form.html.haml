@@ -1,0 +1,18 @@
+- form_for @user, :url => account_path do |f|
+  = f.error_messages
+  %table.form
+    %tr
+      %th= f.label :login
+      %td= f.text_field :login
+    %tr
+      %th= f.label :password, f.object.new_record? ? nil : "Change password"
+      %td= f.password_field :password
+    %tr
+      %th= f.label :password_confirmation
+      %td= f.password_field :password_confirmation
+    %tr
+      %th= f.label :email
+      %td= f.text_field :email
+    %tr
+      %th &nbsp;
+      %td= f.submit submit_text

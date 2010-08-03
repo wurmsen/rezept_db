@@ -1,0 +1,22 @@
+%h1= @recipe.name
+.ingredients
+  %h2 Zutaten:
+  - @recipe.ingredients.each do |ingredient|
+    .ingredient
+      %span.unit= ingredient.unit
+      %span.name= ingredient.name
+
+#directions
+  %h2 Anleitung:
+  = @recipe.directions
+
+.footnotes
+  %h2 Bemerkung:
+  = @recipe.footnotes
+
+.recipe_infos
+  erstellt von #{@recipe.user.login}
+  erstellt am #{@recipe.created_at}
+
+- if @recipe.user_allowed_to_edit?(@current_user)
+  = link_to("bearbeiten", edit_recipe_url(@recipe.id))

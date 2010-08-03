@@ -1,0 +1,6 @@
+- @recipes.each do |recipe|
+  %div.recipe_list
+    %h2= recipe.name
+    %p eingestellt von #{recipe.user.login}
+    %p eingestellt am #{recipe.created_at}
+    = link_to "details", recipe_url(recipe.id)

@@ -1,6 +1,0 @@
-<h1>Neues Rezept erstellen</h1>
-<% form_for @recipe, :url => recipes_path do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "speichern" %>
-<% end %>

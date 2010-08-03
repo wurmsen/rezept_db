@@ -1,0 +1,24 @@
+%table
+  %tr
+    %th Login:
+    %td=h @user.login
+  %tr
+    %th Login count:
+    %td=h @user.login_count
+  %tr
+    %th Last request at:
+    %td=h @user.last_request_at
+  %tr
+    %th Last login at:
+    %td=h @user.last_login_at
+  %tr
+    %th Current login at:
+    %td=h @user.current_login_at
+  %tr
+    %th Last login ip:
+    %td=h @user.last_login_ip
+  %tr
+    %th Current login ip:
+    %td=h @user.current_login_ip
+
+= link_to 'Account bearbeiten', edit_account_path

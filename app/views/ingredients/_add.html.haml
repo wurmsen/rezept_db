@@ -1,0 +1,8 @@
+- f.fields_for :ingredients do |ingredient|
+  %tr
+    %th Zutaten:
+    %td
+      %table.form
+        %tr
+          %th unit
+          %td= ingredient.text_field :unit

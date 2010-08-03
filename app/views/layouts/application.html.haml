@@ -1,0 +1,27 @@
+!!! XML
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "de"}
+  %head
+    %title Unsere Rezepte
+    = stylesheet_link_tag "screen"
+  %body
+    #page
+      #nav
+        #user_nav
+          %ul
+            - if @current_user
+              %li User: #{link_to @current_user.login, account_url}
+              %li= link_to "Logout", user_session_url(@current_user.id), :method => :delete
+            - else
+              %li= link_to "Login", root_url
+
+        #main_nav
+          - if @current_user
+            %ul
+              %li= link_to "alle Rezepte", recipes_url
+              %li= link_to "neues Rezept einstellen", new_recipe_url
+
+
+      #container
+        #content
+          = yield
