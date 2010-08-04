@@ -1,16 +1,19 @@
-- form_for @recipe, :url => recipes_path do |f|
+- form_for @recipe do |f|
   = f.error_messages
   %table.form
     %tr
-      %th= f.label :name, "Name"
+      %th= f.label :name, "Name:"
       %td= f.text_field :name
-    = render :partial => 'ingredients/add', :object => f
+      %tr
+        %th Zutaten:
+        %td
+          = render 'ingredients/form', :f => f
     %tr
-      %th= f.label :directions, "Anleitung"
-      %td= f.text_area :directions
+      %th= f.label :directions, "Anleitung:"
+      %td= f.text_area :directions, :rows => 6
     %tr
-      %th= f.label :footnotes, "Bemerkung"
-      %td= f.text_area :footnotes
+      %th= f.label :footnotes, "Bemerkung:"
+      %td= f.text_area :footnotes, :rows => 4
     %tr
       %th &nbsp;
       %td= f.submit submit_text

@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    3.times { @recipe.ingredients.build }
   end
 
   def create
@@ -30,7 +31,7 @@ class RecipesController < ApplicationController
   def update
     if @recipe.update_attributes(params[:recipe])
       flash[:notice] = "Rezept erfolgreich geändert"
-      redirect_to recipe_url(@recipe.id)
+      redirect_to @recipe
     else
       flash[:error] = "Rezept konnte nicht geändert werden!"
       render :action => :edit
