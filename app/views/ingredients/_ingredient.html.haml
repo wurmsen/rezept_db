@@ -1,5 +1,0 @@
-- f.fields_for :ingredients do |builder|
-  %tr
-    %td= builder.text_field :unit
-    %td= builder.text_field :name
-    %td= @recipe.user_allowed_to_edit?(@current_user) ? "#{builder.check_box :_destroy} #{builder.label :_destroy, "Zutat löschen"}" : "&nbsp;"

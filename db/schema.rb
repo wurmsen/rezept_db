@@ -12,7 +12,6 @@
 ActiveRecord::Schema.define(:version => 20100802203308) do
 
   create_table "ingredients", :force => true do |t|
-    t.string   "unit",       :null => false
     t.string   "name",       :null => false
     t.integer  "recipe_id",  :null => false
     t.datetime "created_at"

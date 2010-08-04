@@ -4,10 +4,12 @@
     %tr
       %th= f.label :name, "Name:"
       %td= f.text_field :name
-      %tr
-        %th Zutaten:
-        %td
-          = render 'ingredients/form', :f => f
+    %tr
+      %th Zutaten:
+      %td
+        - f.fields_for :ingredients do |builder|
+          = render 'ingredients/form', :f => builder
+        %p= link_to_add_fields "hinzufügen", f, :ingredients
     %tr
       %th= f.label :directions, "Anleitung:"
       %td= f.text_area :directions, :rows => 6

@@ -1,7 +1,6 @@
 class CreateIngredients < ActiveRecord::Migration
   def self.up
     create_table :ingredients do |t|
-      t.string  :unit,      :null => false
       t.string  :name,      :null => false
       t.integer :recipe_id, :null => false
       t.timestamps

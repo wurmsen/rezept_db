@@ -15,6 +15,7 @@
               %li= link_to "Logout", user_session_url(@current_user.id), :method => :delete
             - else
               %li= link_to "Login", root_url
+              %li= link_to "registrieren", new_user_url
 
         #main_nav
           - if @current_user

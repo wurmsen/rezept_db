@@ -1,6 +1,3 @@
-%table.form
-  %tr
-    %th= f.label "Maßeinheit"
-    %th= f.label "Zutat"
-    %th &nbsp;
-  = render 'ingredients/ingredient', :f => f
+%p.fields
+  = f.text_field :name
+  = link_to_remove_fields("löschen", f)
