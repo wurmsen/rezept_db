@@ -59,6 +59,11 @@ th, td {
     padding: 5px;
     background-color: white; }
 
+.recipe_list {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #dddddd; }
+
 /* --- FORM FIELDS --- */
 .errorExplanation {
   color: #990f0f;

@@ -1,24 +1,24 @@
 %table
   %tr
-    %th Login:
+    %th Benutzername:
     %td=h @user.login
   %tr
-    %th Login count:
+    %th Anzahl logins:
     %td=h @user.login_count
   %tr
-    %th Last request at:
-    %td=h @user.last_request_at
+    %th letzter Seitenaufruf:
+    %td=h format_date @user.last_request_at
   %tr
-    %th Last login at:
-    %td=h @user.last_login_at
+    %th zuletzt eingeloggt:
+    %td=h format_date @user.last_login_at
   %tr
-    %th Current login at:
-    %td=h @user.current_login_at
+    %th eingeloggt am:
+    %td=h format_date @user.current_login_at
   %tr
-    %th Last login ip:
+    %th zuletzt verwendete IP:
     %td=h @user.last_login_ip
   %tr
-    %th Current login ip:
+    %th momentane IP:
     %td=h @user.current_login_ip
 
 = link_to 'Account bearbeiten', edit_account_path

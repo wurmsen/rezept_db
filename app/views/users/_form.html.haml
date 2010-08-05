@@ -2,16 +2,22 @@
   = f.error_messages
   %table.form
     %tr
-      %th= f.label :login
+      %th= f.label :login, "Benutzername:"
       %td= f.text_field :login
     %tr
-      %th= f.label :password, f.object.new_record? ? nil : "Change password"
+      %th= f.label :first_name, "Vorname:"
+      %td= f.text_field :first_name
+    %tr
+      %th= f.label :last_name, "Nachname:"
+      %td= f.text_field :last_name
+    %tr
+      %th= f.label :password, f.object.new_record? ? "Passwort:" : "Password ändern:"
       %td= f.password_field :password
     %tr
-      %th= f.label :password_confirmation
+      %th= f.label :password_confirmation, "Passwort wiederholen:"
       %td= f.password_field :password_confirmation
     %tr
-      %th= f.label :email
+      %th= f.label :email, "Email:"
       %td= f.text_field :email
     %tr
       %th &nbsp;
