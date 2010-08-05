@@ -15,7 +15,8 @@
 
 .recipe_infos
   erstellt von #{@recipe.user.login}
-  erstellt am #{@recipe.created_at}
+  %br
+  erstellt am #{format_date(@recipe.created_at)}
 
 - if @recipe.user_allowed_to_edit?(@current_user)
   = link_to("bearbeiten", edit_recipe_url(@recipe.id))
