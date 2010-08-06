@@ -7,14 +7,14 @@ body {
   background-color: #dddddd; }
 
 h1 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  padding-left: 20px; }
 
 h2 {
   font-size: 1.2em; }
 
 h1, h2 {
-  padding-left: 15px;
-  margin: 5px; }
+  margin: 5px 0; }
 
 th, td {
   vertical-align: top;
@@ -56,13 +56,16 @@ th, td {
 #container {
   width: 100%; }
   #container #content {
-    padding: 5px;
+    padding: 10px;
     background-color: white; }
 
 .recipe_list {
   margin-bottom: 10px;
   padding: 5px;
   border: 1px solid #dddddd; }
+
+.ingredient {
+  padding-left: 10px; }
 
 /* --- FORM FIELDS --- */
 .errorExplanation {
