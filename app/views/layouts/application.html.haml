@@ -11,7 +11,7 @@
         #user_nav
           %ul
             - if @current_user
-              %li User: #{link_to @current_user.login, account_url}
+              %li Benutzer: #{link_to current_user_display_name, account_url}
               %li= link_to "Logout", user_session_url(@current_user.id), :method => :delete
             - else
               %li= link_to "Login", root_url

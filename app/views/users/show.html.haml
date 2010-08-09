@@ -1,7 +1,13 @@
 %table
   %tr
     %th Benutzername:
-    %td=h @user.login
+    %td= @user.login
+  %tr
+    %th Vorname:
+    %td= @user.first_name
+  %tr
+    %th Nachname:
+    %td= @user.last_name
   %tr
     %th Anzahl logins:
     %td=h @user.login_count
