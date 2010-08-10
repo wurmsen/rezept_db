@@ -1,6 +1,7 @@
 /* --- TAGS --- */
 * {
   font-family: Verdana, Helvetica, Arial;
+  color: #666666;
   margin: 0; }
 
 body {
@@ -44,6 +45,8 @@ th, td {
     background-color: #129e00; }
     #nav #main_nav ul li {
       padding: 23px 31px; }
+    #nav #main_nav a {
+      color: white; }
   #nav ul {
     list-style-position: outside;
     list-style: none;
