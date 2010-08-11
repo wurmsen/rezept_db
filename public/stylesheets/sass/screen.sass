@@ -9,7 +9,6 @@ body
 
 h1
   :font-size 1.5em
-  :padding-left 20px
 
 h2
   :font-size 1.2em
@@ -34,27 +33,26 @@ th, td
     :font-weight bold
     :color #129E00
 
-#nav
-  :width 100%
-  :margin-bottom 2px
-  #user_nav
-    :padding 5px
-    :text-align right
-  #main_nav
-    :padding 5px
-    :height 48px
-    :background-color #129E00
-    ul
-      li
-        :padding 23px 31px
-    a
-      :color #FFF
+#user_nav
+  :padding 5px
+  :text-align right
   ul
     :list-style-position outside
     :list-style none
     :padding 0
     li
       :display inline
+
+#main_nav
+  :background-color #129E00
+  :padding 23px 31px
+  :list-style-position outside
+  :list-style none
+  li
+    :display inline
+    :padding 15px
+  a
+    :color #FFF
 
 #flash_notice, #flash_error
   :padding 5px 8px
@@ -72,7 +70,6 @@ th, td
   :width 100%
   #content
     :padding 10px
-    :background-color #FFF
 
 .recipe_list
   :margin-bottom 10px

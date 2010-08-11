@@ -8,8 +8,7 @@ body {
   background-color: white; }
 
 h1 {
-  font-size: 1.5em;
-  padding-left: 20px; }
+  font-size: 1.5em; }
 
 h2 {
   font-size: 1.2em; }
@@ -33,26 +32,26 @@ th, td {
   font-weight: bold;
   color: #129e00; }
 
-#nav {
-  width: 100%;
-  margin-bottom: 2px; }
-  #nav #user_nav {
-    padding: 5px;
-    text-align: right; }
-  #nav #main_nav {
-    padding: 5px;
-    height: 48px;
-    background-color: #129e00; }
-    #nav #main_nav ul li {
-      padding: 23px 31px; }
-    #nav #main_nav a {
-      color: white; }
-  #nav ul {
+#user_nav {
+  padding: 5px;
+  text-align: right; }
+  #user_nav ul {
     list-style-position: outside;
     list-style: none;
     padding: 0; }
-    #nav ul li {
+    #user_nav ul li {
       display: inline; }
+
+#main_nav {
+  background-color: #129e00;
+  padding: 23px 31px;
+  list-style-position: outside;
+  list-style: none; }
+  #main_nav li {
+    display: inline;
+    padding: 15px; }
+  #main_nav a {
+    color: white; }
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
@@ -69,8 +68,7 @@ th, td {
 #container {
   width: 100%; }
   #container #content {
-    padding: 10px;
-    background-color: white; }
+    padding: 10px; }
 
 .recipe_list {
   margin-bottom: 10px;
