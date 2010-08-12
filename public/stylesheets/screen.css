@@ -2,10 +2,12 @@
 * {
   font-family: Verdana, Helvetica, Arial;
   color: #666666;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 body {
-  background-color: white; }
+  background-color: #cccccc;
+  font-size: 12px; }
 
 h1 {
   font-size: 1.5em; }
@@ -22,15 +24,19 @@ th, td {
 
 /* --- CONTAINER --- */
 #page {
+  position: relative;
   margin: auto;
   text-align: left;
-  width: 850px; }
+  width: 850px;
+  background-color: white;
+  border: 1px solid #999999; }
 
-#logo p {
+#logo {
   font-size: 3em;
   font-style: italic;
   font-weight: bold;
-  color: #129e00; }
+  color: #129e00;
+  padding: 10px; }
 
 #user_nav {
   padding: 5px;
@@ -44,6 +50,7 @@ th, td {
 
 #main_nav {
   background-color: #129e00;
+  font-size: 1.3em;
   padding: 23px 31px;
   list-style-position: outside;
   list-style: none; }
@@ -55,7 +62,7 @@ th, td {
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
-  margin: 10px 0; }
+  margin: 10px 10px; }
 
 #flash_notice {
   background-color: #ccffcc;
@@ -87,3 +94,7 @@ th, td {
 
 .fieldWithErrors {
   color: #990f0f; }
+
+input, textarea {
+  font-size: 1em;
+  padding: 0.3em; }
