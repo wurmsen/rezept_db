@@ -1,12 +1,14 @@
 /* --- TAGS --- */
 * {
   font-family: Verdana, Helvetica, Arial;
-  color: #666666;
+  color: black;
   margin: 0;
   padding: 0; }
 
 body {
-  background-color: #cccccc;
+  background-image: url(/images/background_page.jpg);
+  background-repeat: repeat-x;
+  background-color: #464646;
   font-size: 12px; }
 
 h1 {
@@ -27,9 +29,7 @@ th, td {
   position: relative;
   margin: auto;
   text-align: left;
-  width: 850px;
-  background-color: white;
-  border: 1px solid #999999; }
+  width: 860px; }
 
 #logo {
   font-size: 3em;
@@ -62,7 +62,7 @@ th, td {
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
-  margin: 10px 10px; }
+  margin: 10px 0; }
 
 #flash_notice {
   background-color: #ccffcc;
@@ -75,15 +75,44 @@ th, td {
 #container {
   width: 100%; }
   #container #content {
-    padding: 10px; }
+    margin-top: 10px; }
 
+/* --- RECIPE --- */
 .recipe_list {
   margin-bottom: 10px;
   padding: 5px;
   border: 1px solid #dddddd; }
 
-.ingredient {
-  padding-left: 10px; }
+#recipe {
+  float: left;
+  margin-right: 20px;
+  background: #f2f2f2;
+  width: 550px;
+  padding: 0.5em; }
+  #recipe h1 {
+    padding: 0 0 10px 180px; }
+
+#ingredients {
+  float: left;
+  margin-right: 20px; }
+
+.strong {
+  font-weight: bold; }
+
+#directions {
+  width: 100%; }
+
+#recipe_infos {
+  width: 100%;
+  padding: 5px; }
+  #recipe_infos .label {
+    font-weight: bold;
+    font-size: 1.2em; }
+  #recipe_infos .text {
+    color: white;
+    font-size: 1.2em; }
+  #recipe_infos p {
+    margin: 2px; }
 
 /* --- FORM FIELDS --- */
 .errorExplanation {

@@ -1,22 +1,34 @@
-%h1= @recipe.name
-.ingredients
-  %h2 Zutaten:
-  - @recipe.ingredients.each do |ingredient|
-    .ingredient
-      %span.name= ingredient.name
+#recipe
+  %h1= @recipe.name
+  #ingredients
+    %p.strong Zutaten:
+    %ul
+      - @recipe.ingredients.each do |ingredient|
+        %li= ingredient.name
 
-#directions
-  %h2 Anleitung:
-  = @recipe.directions
+  #directions
+    %p.strong Anleitung:
+    = @recipe.directions
 
-.footnotes
-  %h2 Bemerkung:
-  = @recipe.footnotes
+    %p.strong Bemerkung:
+    = @recipe.footnotes
 
-.recipe_infos
-  erstellt von #{@recipe.user.login}
-  %br
-  erstellt am #{format_date(@recipe.created_at)}
+#recipe_infos
+  %p
+    %span.label Author:
+    %span.text #{@recipe.user.display_name}
+  
+  %p
+    %span.label eingestellt am:
+    %span.text #{format_date(@recipe.created_at)}
+  
+  %p
+    %span.label Bewertung:
+    %img{:src => '/images/star_rated.gif'}
+    %img{:src => '/images/star_rated.gif'}
+    %img{:src => '/images/star_rated.gif'}
+    %img{:src => '/images/star_rated.gif'}
+    %img{:src => '/images/star_not_rated.gif'}
 
-- if @recipe.user_allowed_to_edit?(@current_user)
-  = link_to("bearbeiten", edit_recipe_url(@recipe.id))
+  - if @recipe.user_allowed_to_edit?(@current_user)
+    = link_to("bearbeiten", edit_recipe_url(@recipe.id))

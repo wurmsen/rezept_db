@@ -1,12 +1,14 @@
 /* --- TAGS --- */
 *
   :font-family Verdana,Helvetica,Arial
-  :color #666
+  :color #000
   :margin 0
   :padding 0
 
 body
-  :background-color #CCC
+  :background-image url(/images/background_page.jpg)
+  :background-repeat repeat-x
+  :background-color #464646
   :font-size 12px
 
 h1
@@ -27,9 +29,7 @@ th, td
   :position relative
   :margin auto
   :text-align left
-  :width 850px
-  :background-color #FFF
-  :border 1px solid #999
+  :width 860px
 
 #logo
   :font-size 3em
@@ -62,7 +62,7 @@ th, td
 
 #flash_notice, #flash_error
   :padding 5px 8px
-  :margin 10px 10px
+  :margin 10px 0
 
 #flash_notice
   :background-color #CFC
@@ -75,15 +75,44 @@ th, td
 #container
   :width 100%
   #content
-    :padding 10px
+    :margin-top 10px
 
+/* --- RECIPE --- */
 .recipe_list
   :margin-bottom 10px
   :padding 5px
   :border 1px solid #DDD
 
-.ingredient
-  :padding-left 10px
+#recipe
+  :float left
+  :margin-right 20px
+  :background #f2f2f2
+  :width 550px
+  :padding 0.5em
+  h1
+    :padding 0 0 10px 180px
+
+#ingredients
+  :float left
+  :margin-right 20px
+
+.strong
+  :font-weight bold
+
+#directions
+  :width 100%
+
+#recipe_infos
+  :width 100%
+  :padding 5px
+  .label
+    :font-weight bold
+    :font-size 1.2em
+  .text
+    :color #FFF
+    :font-size 1.2em
+  p
+    :margin 2px
 
 /* --- FORM FIELDS --- */
 .errorExplanation
