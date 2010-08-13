@@ -68,7 +68,7 @@ th, td
 #main_nav
   :background-color #0E6F00
   :font-size 1.3em
-  :padding 23px 31px
+  :padding 20px 30px
   :list-style-position outside
   :list-style none
   :-moz-border-radius 5px
@@ -99,9 +99,9 @@ th, td
 
 /* --- RECIPE --- */
 .recipe_list
-  :margin-bottom 10px
-  :padding 5px
-  :border 1px solid #DDD
+  +white_container
+  :padding 20px
+  :margin-bottom 5px
 
 #recipe_partial
   +clearfix
@@ -179,3 +179,7 @@ input, textarea
 /* --- GENERAL STUFF --- */
 .strong
   :font-weight bold
+
+.text_container
+  +white_container
+  :padding 20px

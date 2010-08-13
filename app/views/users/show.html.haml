@@ -1,30 +1,31 @@
-%table
-  %tr
-    %th Benutzername:
-    %td= @user.login
-  %tr
-    %th Vorname:
-    %td= @user.first_name
-  %tr
-    %th Nachname:
-    %td= @user.last_name
-  %tr
-    %th Anzahl logins:
-    %td=h @user.login_count
-  %tr
-    %th letzter Seitenaufruf:
-    %td=h format_date @user.last_request_at
-  %tr
-    %th zuletzt eingeloggt:
-    %td=h format_date @user.last_login_at
-  %tr
-    %th eingeloggt am:
-    %td=h format_date @user.current_login_at
-  %tr
-    %th zuletzt verwendete IP:
-    %td=h @user.last_login_ip
-  %tr
-    %th momentane IP:
-    %td=h @user.current_login_ip
+.text_container
+  %table
+    %tr
+      %th Benutzername:
+      %td= @user.login
+    %tr
+      %th Vorname:
+      %td= @user.first_name
+    %tr
+      %th Nachname:
+      %td= @user.last_name
+    %tr
+      %th Anzahl logins:
+      %td=h @user.login_count
+    %tr
+      %th letzter Seitenaufruf:
+      %td=h format_date @user.last_request_at
+    %tr
+      %th zuletzt eingeloggt:
+      %td=h format_date @user.last_login_at
+    %tr
+      %th eingeloggt am:
+      %td=h format_date @user.current_login_at
+    %tr
+      %th zuletzt verwendete IP:
+      %td=h @user.last_login_ip
+    %tr
+      %th momentane IP:
+      %td=h @user.current_login_ip
 
-= link_to 'Account bearbeiten', edit_account_path
+  = link_to 'Account bearbeiten', edit_account_path
