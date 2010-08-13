@@ -1,34 +1,46 @@
-#recipe
-  %h1= @recipe.name
-  #ingredients
-    %p.strong Zutaten:
-    %ul
-      - @recipe.ingredients.each do |ingredient|
-        %li= ingredient.name
+#recipe_partial
+  #recipe
+    %h1= @recipe.name
+    #ingredients
+      %p.strong Zutaten:
+      %ul
+        - @recipe.ingredients.each do |ingredient|
+          %li= ingredient.name
 
-  #directions
-    %p.strong Anleitung:
-    = @recipe.directions
+    #directions
+      %p.strong Anleitung:
+      = @recipe.directions
 
-    %p.strong Bemerkung:
-    = @recipe.footnotes
+      %p.strong Bemerkung:
+      = @recipe.footnotes
 
-#recipe_infos
-  %p
-    %span.label Author:
-    %span.text #{@recipe.user.display_name}
+  #recipe_infos
+    %p
+      %span.label Author:
+      %span.text #{@recipe.user.display_name}
   
-  %p
-    %span.label eingestellt am:
-    %span.text #{format_date(@recipe.created_at)}
+    %p
+      %span.label eingestellt am:
+      %span.text #{format_date(@recipe.created_at)}
   
-  %p
-    %span.label Bewertung:
-    %img{:src => '/images/star_rated.gif'}
-    %img{:src => '/images/star_rated.gif'}
-    %img{:src => '/images/star_rated.gif'}
-    %img{:src => '/images/star_rated.gif'}
-    %img{:src => '/images/star_not_rated.gif'}
+    %p
+      %span.label Bewertung:
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_not_rated.gif'}
 
-  - if @recipe.user_allowed_to_edit?(@current_user)
-    = link_to("bearbeiten", edit_recipe_url(@recipe.id))
+    - if @recipe.user_allowed_to_edit?(@current_user)
+      = link_to("bearbeiten", edit_recipe_url(@recipe.id))
+
+#give_rating
+  %span.strong Bewertung abgeben:
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_not_rated.gif'}
+
+#comments
+  super gut

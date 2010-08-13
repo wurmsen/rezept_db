@@ -20,10 +20,14 @@ h2 {
 h1, h2 {
   margin: 5px 0; }
 
+a:hover {
+  text-decoration: none; }
+
 th, td {
   vertical-align: top;
   padding: 2px; }
 
+/* --- CLEARFIX AS MIXIN --- */
 /* --- CONTAINER --- */
 #page {
   position: relative;
@@ -49,16 +53,19 @@ th, td {
       display: inline; }
 
 #main_nav {
-  background-color: #129e00;
+  background-color: #0e6f00;
   font-size: 1.3em;
   padding: 23px 31px;
   list-style-position: outside;
-  list-style: none; }
+  list-style: none;
+  -moz-border-radius: 5px; }
   #main_nav li {
     display: inline;
     padding: 15px; }
   #main_nav a {
-    color: white; }
+    color: white;
+    font-weight: bold;
+    text-decoration: none; }
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
@@ -83,24 +90,41 @@ th, td {
   padding: 5px;
   border: 1px solid #dddddd; }
 
+#recipe_partial {
+  *display: inline-block; }
+  #recipe_partial:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
 #recipe {
+  background: #f2f2f2;
+  border: 1px solid black;
   float: left;
   margin-right: 20px;
-  background: #f2f2f2;
-  width: 550px;
-  padding: 0.5em; }
+  width: 560px;
+  line-height: 1.5em; }
   #recipe h1 {
-    padding: 0 0 10px 180px; }
+    padding: 20px 0 0 160px;
+    font-size: 2em;
+    letter-spacing: -1px;
+    line-height: 1.5em; }
 
 #ingredients {
+  margin: 15px 0 20px 20px;
   float: left;
-  margin-right: 20px; }
-
-.strong {
-  font-weight: bold; }
+  width: 120px; }
+  #ingredients ul {
+    padding-left: 15px; }
 
 #directions {
-  width: 100%; }
+  margin: 10px 0 20px 20px;
+  width: 360px;
+  float: left; }
+  #directions .strong {
+    padding-top: 5px; }
 
 #recipe_infos {
   width: 100%;
@@ -113,6 +137,25 @@ th, td {
     font-size: 1.2em; }
   #recipe_infos p {
     margin: 2px; }
+
+#give_rating {
+  padding: 10px 20px; }
+
+#comments {
+  background: #f2f2f2;
+  border: 1px solid black;
+  padding: 10px 20px;
+  width: 520px;
+  -moz-border-radius: 5px; }
+
+#page_foot {
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #0e6f00;
+  text-align: right;
+  -moz-border-radius: 5px; }
+  #page_foot .strong {
+    color: white; }
 
 /* --- FORM FIELDS --- */
 .errorExplanation {
@@ -127,3 +170,7 @@ th, td {
 input, textarea {
   font-size: 1em;
   padding: 0.3em; }
+
+/* --- GENERAL STUFF --- */
+.strong {
+  font-weight: bold; }

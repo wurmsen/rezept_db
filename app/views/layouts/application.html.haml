@@ -2,7 +2,7 @@
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "de"}
   %head
-    %title Unsere Rezepte
+    %title Mein Rezeptbuch
     = stylesheet_link_tag "screen"
     = javascript_include_tag "jquery", :cache => true
     = javascript_include_tag "application_jquery", :cache => true
@@ -31,3 +31,6 @@
 
         #content
           = yield
+      
+      #page_foot
+        %span.strong &copy; 2010
