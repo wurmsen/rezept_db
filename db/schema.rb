@@ -9,7 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100802203308) do
+ActiveRecord::Schema.define(:version => 20100813205452) do
+
+  create_table "categories", :force => true do |t|
+    t.string "name", :null => false
+  end
 
   create_table "ingredients", :force => true do |t|
     t.string   "name",       :null => false
@@ -19,12 +23,13 @@ ActiveRecord::Schema.define(:version => 20100802203308) do
   end
 
   create_table "recipes", :force => true do |t|
-    t.string   "name",       :null => false
-    t.text     "directions", :null => false
+    t.string   "name",        :null => false
+    t.text     "directions",  :null => false
     t.text     "footnotes"
-    t.integer  "user_id",    :null => false
+    t.integer  "user_id",     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
   end
 
   create_table "users", :force => true do |t|
