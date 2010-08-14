@@ -57,8 +57,7 @@ th, td {
   font-size: 1.3em;
   padding: 20px 30px;
   list-style-position: outside;
-  list-style: none;
-  -moz-border-radius: 5px; }
+  list-style: none; }
   #main_nav li {
     display: inline;
     padding: 15px; }
@@ -112,6 +111,8 @@ th, td {
     font-size: 2em;
     letter-spacing: -1px;
     line-height: 1.5em; }
+  #recipe h2 {
+    padding: 0 0 0 160px; }
 
 #ingredients {
   margin: 15px 0 20px 20px;
@@ -146,15 +147,13 @@ th, td {
   background: #f2f2f2;
   border: 1px solid black;
   padding: 10px 20px;
-  width: 520px;
-  -moz-border-radius: 5px; }
+  width: 520px; }
 
 #page_foot {
   margin: 5px 0;
   padding: 5px;
   background-color: #0e6f00;
-  text-align: right;
-  -moz-border-radius: 5px; }
+  text-align: right; }
   #page_foot .strong {
     color: white; }
 

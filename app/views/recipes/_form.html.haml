@@ -5,6 +5,9 @@
       %th= f.label :name, "Name:"
       %td= f.text_field :name
     %tr
+      %th= f.label :category
+      %td= f.select :category_id, Category.all.collect { |c| [c.name, c.id] }
+    %tr
       %th Zutaten:
       %td
         - f.fields_for :ingredients do |builder|
