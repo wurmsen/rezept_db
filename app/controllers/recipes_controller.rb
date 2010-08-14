@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_filter :require_user
-  before_filter :get_recipe_from_param, :only => [:show, :edit, :update]
+  before_filter :get_recipe_from_param, :only => [:show, :edit, :update, :destroy]
 
   def index
     @recipes = Recipe.all
@@ -35,6 +35,15 @@ class RecipesController < ApplicationController
     else
       flash[:error] = "Rezept konnte nicht geändert werden!"
       render :action => :edit
+    end
+  end
+
+  def destroy
+    if @recipe.destroy
+      flash[:notice] = "Rezept wurde gelöscht"
+      render :action => :index
+    else
+      flash[:error] = "Rezept konnte nicht gelöscht werden"
     end
   end
 

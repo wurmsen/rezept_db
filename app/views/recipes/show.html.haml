@@ -34,6 +34,7 @@
 
     - if @recipe.user_allowed_to_edit?(@current_user)
       = link_to("bearbeiten", edit_recipe_url(@recipe.id))
+      = link_to("löschen", recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?")
 
 #give_rating
   %span.strong Bewertung abgeben:
