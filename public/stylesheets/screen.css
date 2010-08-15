@@ -20,6 +20,10 @@ h2 {
 h1, h2 {
   margin: 5px 0; }
 
+a img {
+  border: none;
+  margin-right: 5px; }
+
 a:hover {
   text-decoration: none; }
 
@@ -139,6 +143,10 @@ th, td {
     font-size: 1.2em; }
   #recipe_infos p {
     margin: 2px; }
+  #recipe_infos #recipe_actions {
+    margin-top: 20px; }
+    #recipe_infos #recipe_actions a {
+      text-decoration: none; }
 
 #give_rating {
   padding: 10px 20px; }
@@ -167,7 +175,7 @@ th, td {
 .fieldWithErrors {
   color: #990f0f; }
 
-input, textarea {
+input, textarea, select {
   font-size: 1em;
   padding: 0.3em; }
 

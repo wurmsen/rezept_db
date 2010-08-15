@@ -32,9 +32,10 @@
       %img{:src => '/images/star_rated.gif'}
       %img{:src => '/images/star_not_rated.gif'}
 
-    - if @recipe.user_allowed_to_edit?(@current_user)
-      = link_to("bearbeiten", edit_recipe_url(@recipe.id))
-      = link_to("löschen", recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?")
+    #recipe_actions
+      - if @recipe.user_allowed_to_edit?(@current_user)
+        %p= link_to(with_icon("pencil", "bearbeiten"), edit_recipe_url(@recipe.id))
+        %p= link_to(with_icon("cancel", "löschen"), recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?")
 
 #give_rating
   %span.strong Bewertung abgeben:
