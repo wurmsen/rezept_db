@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class RecipeTest < ActiveSupport::TestCase
-  fixtures :recipes, :users
   def test_recipe_can_only_be_edited_by_creator
     recipe = recipes(:wurstbrot)
     allowed_user = users(:admin)
