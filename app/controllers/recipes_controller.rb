@@ -26,6 +26,9 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    unless is_current_user_allowed?
+      flash[:error] = "Nur der Ersteller des Rezepts kann es bearbeiten!"
+    end
   end
 
   def update
@@ -39,16 +42,24 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    if @recipe.destroy
-      flash[:notice] = "Rezept wurde gelöscht"
-      render :action => :index
+    if is_current_user_allowed?
+      if @recipe.destroy
+        flash[:notice] = "Rezept wurde gelöscht"
+        render :action => :index
+      else
+        flash[:error] = "Rezept konnte nicht gelöscht werden"
+      end
     else
-      flash[:error] = "Rezept konnte nicht gelöscht werden"
+      flash[:error] = "Nur der Ersteller des Rezepts kann es löschen!"
     end
   end
 
   private
     def get_recipe_from_param
       @recipe = Recipe.find(params[:id])
+    end
+
+    def is_current_user_allowed?
+      @recipe.user == current_user
     end
 end
