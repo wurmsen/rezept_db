@@ -1,17 +1,18 @@
-%h1 Login
+.text_container
+  %h1 Login
 
-- form_for @user_session, :url => user_session_path do |f|
-  = f.error_messages
-  %table.form
-    %tr
-      %th= f.label :login, "Benutzername:"
-      %td= f.text_field :login
-    %tr
-      %th= f.label :password, "Passwort:"
-      %td= f.password_field :password
-    %tr
-      %th &nbsp;
-      %td= "#{f.check_box :remember_me} #{f.label :remember_me, "Angemeldet bleiben"}"
-    %tr
-      %th &nbsp;
-      %td= f.submit "Login"
+  - form_for @user_session, :url => user_session_path do |f|
+    = f.error_messages
+    %table
+      %tr
+        %th= f.label :login, "Benutzername:"
+        %td= f.text_field :login
+      %tr
+        %th= f.label :password, "Passwort:"
+        %td= f.password_field :password
+      %tr
+        %th &nbsp;
+        %td= "#{f.check_box :remember_me} #{f.label :remember_me, "Angemeldet bleiben"}"
+      %tr
+        %th &nbsp;
+        %td= f.submit "Login"

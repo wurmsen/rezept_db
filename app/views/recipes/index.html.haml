@@ -1,6 +1,9 @@
 - @recipes.each do |recipe|
   %div.recipe_list
-    %h2= recipe.name
-    %p eingestellt von #{recipe.user.display_name}
-    %p eingestellt am #{format_date(recipe.created_at)}
+    %h2= link_to recipe.name, recipe_url(recipe.id)
+    %h3= recipe.category.name
+    %p
+      eingestellt von #{recipe.user.display_name}
+      %br
+      eingestellt am #{format_date(recipe.created_at)}
     = link_to with_icon("details", "Details"), recipe_url(recipe.id)

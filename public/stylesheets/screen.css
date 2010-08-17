@@ -17,7 +17,11 @@ h1 {
 h2 {
   font-size: 1.2em; }
 
-h1, h2 {
+h3 {
+  font-size: 1em;
+  font-style: italic; }
+
+h1, h2, h3 {
   margin: 5px 0; }
 
 a img {
@@ -94,6 +98,8 @@ th, td {
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 5px; }
+  .recipe_list p {
+    margin: 5px 0; }
 
 #recipe_partial {
   *display: inline-block; }
