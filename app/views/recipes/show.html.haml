@@ -17,7 +17,7 @@
 
   #recipe_infos
     %p
-      %span.label Author:
+      %span.label Autor:
       %span.text #{@recipe.user.display_name}
   
     %p
@@ -34,8 +34,8 @@
 
     #recipe_actions
       - if @recipe.user_allowed_to_edit?(@current_user)
-        %p= link_to(with_icon("pencil", "bearbeiten"), edit_recipe_url(@recipe.id))
-        %p= link_to(with_icon("cancel", "löschen"), recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?")
+        %p= link_to "bearbeiten", edit_recipe_url(@recipe.id), :class => "edit"
+        %p= link_to "löschen", recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?", :class => "delete"
 
 #give_rating
   %span.strong Bewertung abgeben:

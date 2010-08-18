@@ -1,7 +1,37 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+ingredient_1_1:
+  id: 1
+  name: 1 Scheibe Brot
+  recipe_id: 1
+ingredient_1_2:
+  id: 2
+  name: 10g Butter
+  recipe_id: 1
+ingredient_1_3:
+  id: 3
+  name: 2 Scheiben Schinken
+  recipe_id: 1
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+ingredient_2_1:
+  id: 4
+  name: 2 Zehen Knoblauch
+  recipe_id: 2
+ingredient_2_2:
+  id: 5
+  name: 1 Tomate, fleischig
+  recipe_id: 2
+ingredient_2_3:
+  id: 6
+  name: einige Basilikum-Blätter
+  recipe_id: 2
+ingredient_2_4:
+  id: 7
+  name: Salz und Pfeffer
+  recipe_id: 2
+ingredient_2_5:
+  id: 8
+  name: 8 Scheiben Baguette, quer geschnitten
+  recipe_id: 2
+ingredient_2_6:
+  id: 9
+  name: 4 EL Öl (Oliven)
+  recipe_id: 2

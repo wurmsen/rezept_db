@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
       flash[:notice] = "Rezept gespeichert"
       redirect_back_or_default recipes_url
     else
+      flash[:error] = "Rezept konnte nicht gespeichert werden!"
       render :action => :new
     end
   end
@@ -45,7 +46,7 @@ class RecipesController < ApplicationController
     if is_current_user_allowed?
       if @recipe.destroy
         flash[:notice] = "Rezept wurde gelöscht"
-        render :action => :index
+        redirect_to :action => :index
       else
         flash[:error] = "Rezept konnte nicht gelöscht werden"
       end

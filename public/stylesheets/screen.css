@@ -36,7 +36,7 @@ th, td {
   vertical-align: top;
   padding: 2px; }
 
-/* --- CLEARFIX AS MIXIN --- */
+/* --- MIXINS --- */
 /* --- CONTAINER --- */
 #page {
   position: relative;
@@ -152,8 +152,8 @@ th, td {
     margin: 2px; }
   #recipe_infos #recipe_actions {
     margin-top: 20px; }
-    #recipe_infos #recipe_actions a {
-      text-decoration: none; }
+    #recipe_infos #recipe_actions p {
+      margin: 5px 0; }
 
 #give_rating {
   padding: 10px 20px; }
@@ -194,3 +194,23 @@ input, textarea, select {
   background: #f2f2f2;
   border: 1px solid black;
   padding: 20px; }
+
+.details {
+  background-image: url("/images/icons/details.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
+
+.edit {
+  background-image: url("/images/icons/pencil.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
+
+.delete {
+  background-image: url("/images/icons/cancel.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
+
+.add {
+  background-image: url("/images/icons/add.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }

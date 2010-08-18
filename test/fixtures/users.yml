@@ -1,6 +1,6 @@
 admin:
   id: 1
-  login: admin
+  login: wurmsen
   first_name: Thomas
   last_name: Wurm
   email: webmaster@wurmsen.net
@@ -10,6 +10,7 @@ admin:
   single_access_token: t643J1ACUOkJcMM2dghp
   perishable_token: cT2RcrGrGrZFhAq1yC4Y
   created_at: <%= Date.today - 2 %>
+  is_admin: true
 
 dummy_1:
   id: 2
@@ -23,3 +24,4 @@ dummy_1:
   single_access_token: t643J1ACUOkJcMM2dghp
   perishable_token: cT2RcrGrGrZFhAq1yC4Y
   created_at: <%= Date.today - 2 %>
+  is_admin: false

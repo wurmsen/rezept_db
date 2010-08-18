@@ -3,6 +3,8 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :name, :null => false
     end
+
+    add_index :categories, :name, :unique => true
   end
 
   def self.down

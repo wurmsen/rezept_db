@@ -15,8 +15,4 @@ module ApplicationHelper
     end
     link_to_function(name, h("add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")"))
   end
-
-  def with_icon(icon_name, link_text)
-    image_tag("/images/icons/#{icon_name}.png", :alt => link_text) + link_text
-  end
 end

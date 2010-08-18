@@ -6,7 +6,7 @@
       %td= f.text_field :name
     %tr
       %th= f.label :category
-      %td= f.select :category_id, Category.all.collect { |c| [c.name, c.id] }
+      %td= f.select :category_id, Category.ordered.collect { |c| [c.name, c.id] }
     %tr
       %th Zutaten:
       %td

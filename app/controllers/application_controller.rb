@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_session, :current_user, :current_user_display_name
   filter_parameter_logging :password, :password_confirmation
 
+  def only_admin
+    unless current_user.is_admin
+      redirect_to root_url
+    end
+  end
+
   private
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
