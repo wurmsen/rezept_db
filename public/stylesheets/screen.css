@@ -1,0 +1,233 @@
+/* --- TAGS --- */
+* {
+  font-family: Verdana, Helvetica, Arial;
+  color: black;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-image: url(/images/background_page.jpg);
+  background-repeat: repeat-x;
+  background-color: #464646;
+  font-size: 12px; }
+
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-size: 1.2em; }
+
+h3 {
+  font-size: 1em;
+  font-style: italic; }
+
+h1, h2, h3 {
+  margin: 5px 0; }
+
+a img {
+  border: none;
+  margin-right: 5px;
+  vertical-align: bottom; }
+
+a:hover {
+  text-decoration: none; }
+
+th, td {
+  vertical-align: top;
+  padding: 2px; }
+
+/* --- MIXINS --- */
+/* --- CONTAINER --- */
+#page {
+  position: relative;
+  margin: auto;
+  text-align: left;
+  width: 860px; }
+
+#logo {
+  font-size: 3em;
+  font-style: italic;
+  font-weight: bold;
+  color: #129e00;
+  padding: 10px; }
+
+#user_nav {
+  padding: 5px;
+  text-align: right; }
+  #user_nav ul {
+    list-style-position: outside;
+    list-style: none;
+    padding: 0; }
+    #user_nav ul li {
+      display: inline; }
+
+#main_nav {
+  background-color: #0e6f00;
+  font-size: 1.3em;
+  padding: 20px 30px;
+  list-style-position: outside;
+  list-style: none; }
+  #main_nav li {
+    display: inline;
+    padding: 15px; }
+  #main_nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none; }
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0; }
+
+#flash_notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66; }
+
+#flash_error {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666; }
+
+#container {
+  width: 100%; }
+  #container #content {
+    margin-top: 10px; }
+
+/* --- RECIPE --- */
+.recipe_list {
+  background: #f2f2f2;
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 5px; }
+  .recipe_list p {
+    margin: 5px 0; }
+
+#recipe {
+  background: #f2f2f2;
+  border: 1px solid black;
+  float: left;
+  margin-right: 20px;
+  width: 560px;
+  line-height: 1.5em; }
+  #recipe h1 {
+    padding: 20px 0 0 160px;
+    font-size: 2em;
+    letter-spacing: -1px;
+    line-height: 1.5em; }
+  #recipe h2 {
+    padding: 0 0 0 160px; }
+
+#ingredients {
+  margin: 15px 0 20px 20px;
+  float: left;
+  width: 120px; }
+  #ingredients ul {
+    padding-left: 15px; }
+
+#directions {
+  margin: 10px 0 20px 20px;
+  width: 360px;
+  float: left; }
+  #directions .strong {
+    padding-top: 5px; }
+
+#recipe_infos {
+  width: 100%;
+  padding: 5px; }
+  #recipe_infos .label {
+    font-weight: bold;
+    font-size: 1.2em; }
+  #recipe_infos .text {
+    color: white;
+    font-size: 1.2em; }
+  #recipe_infos p {
+    margin: 2px; }
+  #recipe_infos #recipe_actions {
+    margin-top: 20px; }
+    #recipe_infos #recipe_actions p {
+      margin: 5px 0; }
+
+#give_rating {
+  padding: 10px 20px; }
+
+#comments {
+  background: #f2f2f2;
+  border: 1px solid black;
+  padding: 10px 20px;
+  width: 520px; }
+
+#page_foot {
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #0e6f00;
+  text-align: right; }
+  #page_foot .strong {
+    color: white; }
+
+#recipe_filter {
+  margin-left: 580px; }
+
+/* --- 2 columns layout --- */
+#column_container {
+  *display: inline-block; }
+  #column_container:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+#column_left {
+  float: left;
+  margin-right: 20px;
+  width: 560px;
+  line-height: 1.5em; }
+
+#column_right {
+  width: 100%;
+  padding: 5px; }
+
+/* --- FORM FIELDS --- */
+.errorExplanation {
+  color: #990f0f;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #990f0f; }
+
+.fieldWithErrors {
+  color: #990f0f; }
+
+input, textarea, select {
+  font-size: 1em;
+  padding: 0.3em; }
+
+/* --- GENERAL STUFF --- */
+.strong {
+  font-weight: bold; }
+
+.text_container {
+  background: #f2f2f2;
+  border: 1px solid black;
+  padding: 20px; }
+
+.line_breaks {
+  white-space: pre-line; }
+
+.details {
+  background-image: url("/images/icons/details.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
+
+.edit {
+  background-image: url("/images/icons/pencil.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
+
+.delete {
+  background-image: url("/images/icons/cancel.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
+
+.add {
+  background-image: url("/images/icons/add.png");
+  background-repeat: no-repeat;
+  padding-left: 20px; }

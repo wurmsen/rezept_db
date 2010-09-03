@@ -1,0 +1,17 @@
+.text_container
+  %h1 Kategorien
+
+  %table
+    %tr
+      %th Name
+      %th Reihenfolge
+      %th &nbsp;
+    - @categories.each do |category|
+      %tr
+        %td= category.name
+        %td= category.display_order
+        %td
+          = link_to "bearbeiten", edit_category_url(category.id), :class => "edit"
+          = link_to "löschen", category_url(category.id), :method => :delete, :confirm => "Soll Kategory wirklich gelöscht werden?", :class => "delete"
+
+  = link_to "Kategorie hinzufügen", new_category_url, :class => "add"

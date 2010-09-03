@@ -1,0 +1,14 @@
+starter:
+  id: 1
+  name: Vorspeise
+  display_order: 1
+
+main_dish:
+  id: 2
+  name: Hauptgang
+  display_order: 2
+
+dessert:
+  id: 3
+  name: Nachspeise
+  display_order: 3

@@ -1,0 +1,49 @@
+#column_container
+  #recipe
+    %h1= @recipe.name
+    %h2= @recipe.category.name
+    #ingredients
+      %p.strong Zutaten:
+      %ul
+        - @recipe.ingredients.each do |ingredient|
+          %li= ingredient.name
+
+    #directions
+      %p.strong Anleitung:
+      = @recipe.directions
+
+      %p.strong Bemerkung:
+      = @recipe.footnotes
+
+  #recipe_infos
+    %p
+      %span.label Autor:
+      %span.text #{@recipe.user.display_name}
+  
+    %p
+      %span.label eingestellt am:
+      %span.text #{format_date(@recipe.created_at)}
+  
+    %p
+      %p.label durchschnittliche Bewertung:
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_rated.gif'}
+      %img{:src => '/images/star_not_rated.gif'}
+
+    #recipe_actions
+      - if @recipe.user_allowed_to_edit?(@current_user)
+        %p= link_to "bearbeiten", edit_recipe_url(@recipe.id), :class => "edit"
+        %p= link_to "löschen", recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?", :class => "delete"
+
+#give_rating
+  %span.strong Bewertung abgeben:
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_rated.gif'}
+  %img{:src => '/images/star_not_rated.gif'}
+
+#comments
+  super gut

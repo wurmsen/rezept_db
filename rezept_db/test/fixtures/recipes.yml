@@ -1,0 +1,15 @@
+wurstbrot:
+  id: 1
+  name: Wurstbrot Deluxe
+  directions: schmieren schmieren schmieren
+  footnotes: sau guad!
+  user_id: 1
+  category_id: 1
+
+bruschetta:
+  id: 2
+  name: Bruschetta
+  directions: Backofen auf 250°C vorheizen. Tomate waschen (evtl. enthäuten) und in kleine Würfel schneiden. Basilikum waschen, trockentupfen und in Streifen schneiden. Knoblauch schälen und durch eine Presse drücken. Alles mischen und mit Salz und Pfeffer würzen. Masse auf die Brotscheiben geben, mit Öl beträufeln und ca. 15 Minuten rösten. Sofort servieren. Alternativ kann man auch noch Mozzarella-Scheiben über die Tomaten legen.
+  footnotes: von chefkoch.de geklaut
+  user_id: 2
+  category_id: 1
