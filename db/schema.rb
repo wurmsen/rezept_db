@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100828141753) do
+ActiveRecord::Schema.define(:version => 20100905180931) do
 
   create_table "categories", :force => true do |t|
     t.string  "name",          :null => false
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(:version => 20100828141753) do
   end
 
   add_index "categories", ["name"], :name => "index_categories_on_name", :unique => true
+
+  create_table "comments", :force => true do |t|
+    t.integer  "recipe_id",  :null => false
+    t.integer  "user_id",    :null => false
+    t.integer  "rating"
+    t.text     "comment",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ingredients", :force => true do |t|
     t.string   "name",       :null => false

@@ -1,0 +1,12 @@
+recipe_1_comment_1:
+  recipe_id: 1
+  user_id: 2
+  rating: 2
+  comment: So ein schmarrn!
+
+recipe_1_comment_2:
+  recipe_id: 1
+  user_id: 1
+  rating: 5
+  comment: So ein super gericht!
+

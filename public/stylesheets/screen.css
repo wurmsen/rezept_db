@@ -149,7 +149,7 @@ th, td {
 #give_rating {
   padding: 10px 20px; }
 
-#comments {
+.comment {
   background: #f2f2f2;
   border: 1px solid black;
   padding: 10px 20px;
