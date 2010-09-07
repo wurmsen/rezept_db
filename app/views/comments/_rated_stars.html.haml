@@ -1,0 +1,9 @@
+- add_to_img = ""
+- if background == "white"
+  - add_to_img = "_white"
+
+- rated.times.each do
+  = image_tag("/images/star_rated#{add_to_img}.gif")
+
+- not_rated.times.each do
+  = image_tag("/images/star_not_rated#{add_to_img}.gif")

@@ -50,6 +50,9 @@ th, td
   :background #f2f2f2
   :border 1px solid #000
 
+=blank_container
+  :padding 10px 20px
+
 =link_with_icon(!img)
   :background-image url(!img)
   :background-repeat no-repeat
@@ -168,13 +171,17 @@ th, td
     p
       :margin 5px 0
 
-#give_rating
-  :padding 10px 20px
-
 .comment
   +white_container
   :padding 10px 20px
+  :margin-bottom 10px
   :width 520px
+  .head
+    :border-bottom 1px dashed #000
+    :padding-bottom 5px
+    :margin-bottom 10px
+    .rating_stars
+      :margin-right 10px
 
 #page_foot
   :margin 5px 0
@@ -218,6 +225,11 @@ input, textarea, select
 .text_container
   +white_container
   :padding 20px
+
+.dark_container
+  +blank_container
+  :font-weight bold
+  :font-size 1.2em
 
 .line_breaks
   :white-space pre-line

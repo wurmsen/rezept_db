@@ -26,25 +26,18 @@
   
     %p
       %p.label durchschnittliche Bewertung:
-      %img{:src => '/images/star_rated.gif'}
-      %img{:src => '/images/star_rated.gif'}
-      %img{:src => '/images/star_rated.gif'}
-      %img{:src => '/images/star_rated.gif'}
-      %img{:src => '/images/star_not_rated.gif'}
+      = render :partial => "comments/rated_stars",                           |
+               :locals => {                                                  |
+                 :rated => @recipe.average_rating,                           |
+                 :not_rated => Comment::MAX_RATING - @recipe.average_rating, |
+                 :background => "dark" }
 
     #recipe_actions
       - if @recipe.user_allowed_to_edit?(@current_user)
         %p= link_to "bearbeiten", edit_recipe_url(@recipe.id), :class => "edit"
         %p= link_to "löschen", recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?", :class => "delete"
 
-#give_rating
-  %span.strong Bewertung abgeben:
-  %img{:src => '/images/star_rated.gif'}
-  %img{:src => '/images/star_rated.gif'}
-  %img{:src => '/images/star_rated.gif'}
-  %img{:src => '/images/star_rated.gif'}
-  %img{:src => '/images/star_not_rated.gif'}
+.dark_container Kommentare:
 
 - @recipe.comments.each do |comment|
-  .comment
-    - build_rating_stars(comment.rating)
+  = render :partial => "comments/show", :locals => { :comment => comment }

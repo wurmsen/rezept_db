@@ -10,7 +10,22 @@ class Recipe < ActiveRecord::Base
 # foto
   validates_presence_of :name, :directions, :user_id, :category_id
 
+  # Checks if current user is the author of this recipe
+  # because only then he is allowed to edit it.
   def user_allowed_to_edit?(current_user)
     user == current_user
+  end
+
+  def average_rating
+    @average_rating ||= calculate_average_rating
+  end
+  # Calculates the average user rating
+  def calculate_average_rating
+    sum = 0
+    ratings = comments.map(&:rating)
+    ratings.each do |rated|
+      sum += rated
+    end
+    sum / ratings.size
   end
 end

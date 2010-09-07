@@ -1,0 +1,14 @@
+.comment
+  .head
+    %span.rating_stars
+      = render :partial => "comments/rated_stars",             |
+               :locals => {                                    |
+                 :rated      => comment.rating,                |
+                 :not_rated  => comment.not_rated_stars_count, |
+                 :background => "white" }
+    
+    %span.strong= comment.user.display_name + ","
+    = format_date(comment.created_at)
+  
+  .text
+    = comment.comment

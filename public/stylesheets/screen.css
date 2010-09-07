@@ -146,14 +146,18 @@ th, td {
     #recipe_infos #recipe_actions p {
       margin: 5px 0; }
 
-#give_rating {
-  padding: 10px 20px; }
-
 .comment {
   background: #f2f2f2;
   border: 1px solid black;
   padding: 10px 20px;
+  margin-bottom: 10px;
   width: 520px; }
+  .comment .head {
+    border-bottom: 1px dashed black;
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+    .comment .head .rating_stars {
+      margin-right: 10px; }
 
 #page_foot {
   margin: 5px 0;
@@ -208,6 +212,11 @@ input, textarea, select {
   background: #f2f2f2;
   border: 1px solid black;
   padding: 20px; }
+
+.dark_container {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.2em; }
 
 .line_breaks {
   white-space: pre-line; }
