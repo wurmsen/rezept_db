@@ -37,7 +37,13 @@
         %p= link_to "bearbeiten", edit_recipe_url(@recipe.id), :class => "edit"
         %p= link_to "löschen", recipe_url(@recipe.id), :method => :delete, :confirm => "Soll dieses Rezept wirklich gelöscht werden?", :class => "delete"
 
-.dark_container Kommentare:
+.dark_container
+  %h2 Kommentare:
+  %p
+    = link_to "Kommentar hinzufügen", "#", :onclick => '$("#comment_form").toggle("slow")'
+
+#comment_form{ :style => "display:none" }
+  = render :partial => "comments/form", :locals => { :submit_text => "speichern" }
 
 - @recipe.comments.each do |comment|
   = render :partial => "comments/show", :locals => { :comment => comment }

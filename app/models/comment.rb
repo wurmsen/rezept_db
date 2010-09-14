@@ -8,4 +8,10 @@ class Comment < ActiveRecord::Base
   def not_rated_stars_count
     MAX_RATING - rating
   end
+
+  # Checks if current user is the author of this recipe
+  # because only then he is allowed to edit it.
+  def user_allowed_to_edit?(current_user)
+    user == current_user
+  end
 end

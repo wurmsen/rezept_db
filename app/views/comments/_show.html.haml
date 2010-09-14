@@ -12,3 +12,7 @@
   
   .text
     = comment.comment
+    - if comment.user_allowed_to_edit?(@current_user)
+      %p
+        = link_to "bearbeiten", edit_comment_url(comment.id), :class => "edit"
+        = link_to "löschen", comment_url(comment.id), :method => :delete, :confirm => "Soll dieser Kommentar wirklich gelöscht werden?", :class => "delete"

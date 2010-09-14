@@ -1,0 +1,14 @@
+- form_for @comment do |f|
+  = f.error_messages
+  = f.hidden_field :recipe_id, :value => @recipe.id
+  %table.form
+    %tr
+      %th= f.label :rating, "Bewertung:"
+      %td= f.select :rating, %w(1 2 3 4 5)
+    %tr
+      %th= f.label :comment, "Kommentar:"
+      %td= f.text_area :comment, :rows => 4
+    %tr
+      %th &nbsp;
+      %td= f.submit submit_text
+  

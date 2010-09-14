@@ -4,6 +4,7 @@ RezeptDb::Application.routes.draw do
   resources :users
   resources :recipes
   resources :categories
+  resources :comments
   root :to => "recipes#index"
   match '/' => 'user_sessions#new'
   match '/:controller(/:action(/:id))'
