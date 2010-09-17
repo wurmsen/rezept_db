@@ -26,6 +26,6 @@ class Recipe < ActiveRecord::Base
     ratings.each do |rated|
       sum += rated
     end
-    sum / ratings.size
+    sum / (ratings.size == 0 ? 1 : ratings.size)
   end
 end
