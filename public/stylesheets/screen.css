@@ -99,7 +99,8 @@ th, td {
   padding: 20px;
   margin-bottom: 5px; }
   .recipe_list p {
-    margin: 5px 0; }
+    margin: 5px 0;
+    padding-left: 20px; }
 
 #recipe {
   background: #f2f2f2;
