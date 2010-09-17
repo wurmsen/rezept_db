@@ -178,6 +178,13 @@ th, td {
 
 #recipe_filter {
   margin-left: 580px; }
+  #recipe_filter h2 {
+    font-weight: bold; }
+  #recipe_filter ul {
+    list-style-position: outside;
+    list-style: none; }
+  #recipe_filter a {
+    color: white; }
 
 /* --- 2 columns layout --- */
 #column_container {
