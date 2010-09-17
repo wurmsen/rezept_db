@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_filter :get_recipe_from_param, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.order("created_at DESC")
+    @recipes = Recipe.by_newest
   end
 
   def new

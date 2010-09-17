@@ -6,7 +6,8 @@ class Recipe < ActiveRecord::Base
   belongs_to :category
   has_many :comments
 
-# kommentare
+  scope :by_newest, order("#{self.table_name}.created_at DESC")
+
 # foto
   validates_presence_of :name, :directions, :user_id, :category_id
 
