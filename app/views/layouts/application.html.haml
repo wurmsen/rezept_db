@@ -5,8 +5,7 @@
     %title Mein Rezeptbuch
     = stylesheet_link_tag "screen"
     = csrf_meta_tag
-    = javascript_include_tag "jquery", :cache => true
-    = javascript_include_tag "application_jquery", :cache => true
+    = javascript_include_tag :defaults
   %body
     #page
       -#%h1#logo Meine Rezepte
