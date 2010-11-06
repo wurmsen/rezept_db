@@ -13,7 +13,7 @@
     #recipe_filter
       %h2 Filter
       %ul
-        %li meine Rezepte
+        %li= link_to "meine Rezepte", recipes_url(:filter => "my")
         %li= link_to "neueste Rezepte", recipes_url
-        %li Rezepte mit den besten Bewertungen
+        %li= link_to "Top 10", recipes_url(:filter => "top_10")
         %li nach Kategorien

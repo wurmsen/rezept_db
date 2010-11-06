@@ -7,9 +7,16 @@ class Recipe < ActiveRecord::Base
   has_many :comments
 
   scope :by_newest, order("#{self.table_name}.created_at DESC")
+  scope :by_user, lambda { |user_id| where("#{self.table_name}.user_id = ?", user_id).by_newest }
 
 # foto
   validates_presence_of :name, :directions, :user_id, :category_id
+
+  class << self
+    def top_10
+      all.map(&:average_rating).sort.reverse
+    end
+  end
 
   # Checks if current user is the author of this recipe
   # because only then he is allowed to edit it.
@@ -20,6 +27,7 @@ class Recipe < ActiveRecord::Base
   def average_rating
     @average_rating ||= calculate_average_rating
   end
+
   # Calculates the average user rating
   def calculate_average_rating
     sum = 0

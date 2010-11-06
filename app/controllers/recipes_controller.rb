@@ -3,7 +3,12 @@ class RecipesController < ApplicationController
   before_filter :get_recipe_from_param, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.by_newest
+    case params["filter"]
+    when "my"
+      @recipes = Recipe.by_user(current_user.id)
+    else
+      @recipes = Recipe.by_newest
+    end
   end
 
   def new
