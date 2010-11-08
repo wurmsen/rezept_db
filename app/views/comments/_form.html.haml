@@ -4,7 +4,12 @@
   %table.form
     %tr
       %th= f.label :rating, "Bewertung:"
-      %td= f.select :rating, %w(1 2 3 4 5)
+      %td
+      = f.radio_button :rating, 1, :class => "star"
+      = f.radio_button :rating, 2, :class => "star"
+      = f.radio_button :rating, 3, :class => "star"
+      = f.radio_button :rating, 4, :class => "star"
+      = f.radio_button :rating, 5, :class => "star"
     %tr
       %th= f.label :comment, "Kommentar:"
       %td= f.text_area :comment, :rows => 4

@@ -4,8 +4,10 @@
   %head
     %title Mein Rezeptbuch
     = stylesheet_link_tag "screen"
+    = stylesheet_link_tag "jquery.rating"
     = csrf_meta_tag
     = javascript_include_tag :defaults
+    = javascript_include_tag "jquery.rating.pack"
   %body
     #page
       -#%h1#logo Meine Rezepte
